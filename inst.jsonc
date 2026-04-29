@@ -1,0 +1,370 @@
+
+{
+  "qualityGates": [
+
+    // =========================================================
+    // 1. CREATE GATE
+    // =========================================================
+    {
+      "action": "create_gate",
+      "name": "Enterprise-All-Features-Gate"
+    },
+
+    // =========================================================
+    // 2. ADD CONDITIONS (ALL METRICS)
+    // =========================================================
+
+    // ---------------- Coverage ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Coverage",
+      "value": 85
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Line Coverage",
+      "value": 80
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Condition Coverage",
+      "value": 75
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Conditions to Cover",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Lines to Cover",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Uncovered Conditions",
+      "value": 20
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Uncovered Lines",
+      "value": 50
+    },
+
+    // ---------------- Duplication ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Duplicated Blocks",
+      "value": 5
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Duplicated Lines",
+      "value": 10
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Duplicated Lines (%)",
+      "value": 3
+    },
+
+    // ---------------- Issues ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Accepted Issues",
+      "value": 0
+    },
+
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Blocker Severity Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "High Severity Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Medium Severity Issues",
+      "value": 5
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Low Severity Issues",
+      "value": 20
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Info Severity Issues",
+      "value": 50
+    },
+
+    // ---------------- Maintainability ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Maintainability Rating",
+      "value": "A"
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Maintainability Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Technical Debt",
+      "value": 1000
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Technical Debt Ratio",
+      "value": 5
+    },
+
+    // ---------------- Reliability ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Reliability Rating",
+      "value": "A"
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Reliability Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Reliability Remediation Effort",
+      "value": 500
+    },
+
+    // ---------------- Security ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Security Issues",
+      "value": 0
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Security Rating",
+      "value": "A"
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Security Review Rating",
+      "value": "A"
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Security Hotspots Reviewed",
+      "value": 100
+    },
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Security Remediation Effort",
+      "value": 500
+    },
+
+    // ---------------- Size ----------------
+    {
+      "action": "add_condition",
+      "gateName": "Enterprise-All-Features-Gate",
+      "metric": "Lines",
+      "value": 100000
+    },
+
+    // =========================================================
+    // 3. PROJECT ASSOCIATION
+    // =========================================================
+    {
+      "action": "select_project",
+      "gateName": "Enterprise-All-Features-Gate",
+      "projectKey": "my-project-key"
+    },
+
+    {
+      "action": "deselect_project",
+      "projectKey": "my-project-key"
+    },
+
+    // =========================================================
+    // 4. ACCESS CONTROL
+    // =========================================================
+    {
+      "action": "add_user",
+      "gateName": "Enterprise-All-Features-Gate",
+      "login": "admin"
+    },
+    {
+      "action": "remove_user",
+      "gateName": "Enterprise-All-Features-Gate",
+      "login": "admin"
+    },
+    {
+      "action": "add_group",
+      "gateName": "Enterprise-All-Features-Gate",
+      "groupName": "dev-team"
+    },
+    {
+      "action": "remove_group",
+      "gateName": "Enterprise-All-Features-Gate",
+      "groupName": "dev-team"
+    },
+
+    // =========================================================
+    // 5. MONITORING
+    // =========================================================
+    {
+      "action": "get_project_status",
+      "projectKey": "my-project-key"
+    },
+
+    {
+      "action": "get_project_status",
+      "analysisId": "analysis-id-example"
+    },
+
+    {
+      "action": "get_project_status",
+      "projectId": "123"
+    },
+
+    // =========================================================
+    // 6. GATE MANAGEMENT
+    // =========================================================
+    {
+      "action": "copy",
+      "name": "Enterprise-All-Features-Gate-Copy",
+      "sourceName": "Enterprise-All-Features-Gate"
+    },
+
+    {
+      "action": "rename_gate",
+      "currentName": "Enterprise-All-Features-Gate-Copy",
+      "name": "Enterprise-All-Renamed-Gate"
+    },
+
+    {
+      "action": "set_default",
+      "name": "Enterprise-All-Features-Gate"
+    },
+
+    {
+      "action": "delete_gate",
+      "name": "Enterprise-All-Renamed-Gate"
+    }
+
+  ]
+}
+//--------  END HERE   --------
+//{
+  // ============================================================
+  // inst.jsonc — Minimal: Create Gate → Set Default → Get Status
+  // Parser : pip install commentjson
+  // Usage  : python auto.py
+  //
+  // Only 3 actions needed. Here is why:
+  //
+  // When "create_gate" runs, auto.py AUTOMATICALLY calls
+  // apply_benchmarks_to_gate() which adds every entry in
+  // fixed_values{} as a condition — no add_condition needed.
+  //
+  // fixed_values applied automatically after create_gate:
+  // ┌──────────────────────────────┬────────┬───────────────────┐
+  // │ Metric                       │ Value  │ Operator          │
+  // ├──────────────────────────────┼────────┼───────────────────┤
+  // │ Coverage                     │ 80%    │ LT (fail < 80%)   │
+  // │ Line Coverage                │ 80%    │ LT (fail < 80%)   │
+  // │ Condition Coverage           │ 75%    │ LT (fail < 75%)   │
+  // │ Duplicated Lines (%)         │ 3%     │ GT (fail > 3%)    │
+  // │ Maintainability Rating       │ A (1)  │ WT (fail > A)     │
+  // │ Reliability Rating           │ A (1)  │ WT (fail > A)     │
+  // │ Security Rating              │ A (1)  │ HARDCODED always  │
+  // │ Security Review Rating       │ A (1)  │ WT (fail > A)     │
+  // │ Uncovered Conditions         │ 25     │ GT (fail > 25)    │
+  // │ Blocker Severity Issues      │ 0      │ GT (fail > 0)     │
+  // │ High Severity Issues         │ 0      │ GT (fail > 0)     │
+  // │ Security Issues              │ 0      │ GT (fail > 0)     │
+  // └──────────────────────────────┴────────┴───────────────────┘
+  //
+  // No add_condition actions are required unless you want to add
+  // metrics that are NOT already in fixed_values (e.g. Issues,
+  // Technical Debt Ratio, Duplicated Blocks).
+  // ============================================================
+
+ // "qualityGates": [
+
+    // ── STEP 1: Create the gate ─────────────────────────────────
+    // auto.py creates the gate then IMMEDIATELY calls
+    // apply_benchmarks_to_gate() → all fixed_values are added
+    // automatically as conditions. Nothing else needed.
+  //  {
+    //  "action": "create_gate",
+    //  "name": "Enterprise-Standard_3"
+    //},
+
+    // ── STEP 2: Set as default ───────────────────────────────────
+    // All new projects will be evaluated against this gate.
+    // Existing projects keep their current gate unless reassigned.
+    //{
+      //"action": "set_default",
+      //"name": "Enterprise-Standard_3"
+    //},
+
+    // ── STEP 3: Get project status ───────────────────────────────
+    // Call this AFTER a SonarQube scan completes.
+    // auto.py fetches gate result and saves it to:
+    //   project_status_YYYYMMDD_HHMMSS_ffffff.json
+    //
+    // Result "status" will be:
+    //   "OK"    → all conditions passed  → pipeline: deploy ✅
+    //   "ERROR" → one or more failed     → pipeline: blocked ❌
+    //
+    // ⚠️  REPLACE these two values before running:
+    //   "projectKey" → Project Settings > General > Project Key
+    //   "branch"     → your branch name, or remove the line
+   //{
+     // "action": "get_project_status",
+     //"projectKey": "t1", // ← REPLACE
+     //"branch": "main"                       // ← REPLACE or remove
+   //}
+
+  //]
+//}
+
